@@ -22,10 +22,10 @@ Debug\x64\lua.lib<br />
 ## Start a new Console project:
 
 Add Headers to your project:<br />
-src\lua.h<br />
-src\luaconf.h<br />
-src\lauxlib.h<br />
-src\lualib.h<br />
+lua.h<br />
+luaconf.h<br />
+lauxlib.h<br />
+lualib.h<br />
 
 Load them in your code<br />
 extern "C" {<br />
@@ -34,6 +34,23 @@ extern "C" {<br />
 	#include "lua\lualib.h"<br />
 }
 
+## Link to the target and platform lib you require:<br />
+To add the lua.lib files as linker input in yopur development environment<br />
+
+Open the project's Property Pages dialog box. (Right click project name, click "Propertys")<br />
+
+### Select C/C++>>General"
+Add the path to the lua header files listed above.<br />
+
+### Select "Input>>Linker"<br />
+Add lua.lib to "Additional Dependencies" property for the target and platform you are working with.<br />
+
+### Select "Input>>General"<br />
+Add the path the required lib in "Additional Library Directories".<br />
+
+Click Apply.<br />
+
+## Start Coding<br />
 // Create a new Lua state<br />
 lua_State * L = luaL_newstate();<br />
 luaL_openlibs(L);<br />

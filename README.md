@@ -29,13 +29,13 @@ lualib.h<br />
 
 Load them in your code<br />
 extern "C" {<br />
-	#include "lua\lua.h"<br />
-	#include "lua\lauxlib.h"<br />
-	#include "lua\lualib.h"<br />
+	#include "lua.h"<br />
+	#include "lauxlib.h"<br />
+	#include "lualib.h"<br />
 }
 
 ## Link to the target and platform lib you require:<br />
-To add the lua.lib files as linker input in yopur development environment<br />
+To add the lua.lib and header files as linker input in your development environment<br />
 
 Open the project's Property Pages dialog box. (Right click project name, click "Propertys")<br />
 
